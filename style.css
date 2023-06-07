@@ -1,7 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap%27");
 
+:root {
+    --bg-color: rgb(255, 0, 0);
+    --container-gap: 90px;
+    --container-padding: 0 120px;
+    --font-family: "Syne";
+    --title-size: 50px;
+    --title-weight: 700;
+    --text-size: 30px;
+    --text-weight: 400;
+}
+
 body {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -10,9 +21,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    gap: var(--container-gap);
     border-radius: 80px;
-    padding: 0 120px;
+    padding: var(--container-padding);
     position: sticky;
     top: 0;
     border: 1px solid white;
@@ -26,17 +37,20 @@ img {
     object-fit: cover;
 }
 
+.title,
+.texte {
+    font-family: var(--font-family);
+}
+
 .title {
-    font-family: "Syne";
-    font-size: 50px;
-    font-weight: 700;
+    font-size: var(--title-size);
+    font-weight: var(--title-weight);
     margin-bottom: 32px;
 }
 
 .texte {
-    font-family: "Syne";
-    font-size: 30px;
-    font-weight: 400px;
+    font-size: var(--text-size);
+    font-weight: var(--text-weight);
 }
 
 @media screen and (max-width: 800px) {
